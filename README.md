@@ -5,13 +5,21 @@ Components:
 two 18650 rechargeable lithium Batteries, 8.2V at full capacity;
 
 DC motor drivers: two TB6612 modules;
+
 Stepper motor drivers: two LN2003 modules;
+
 Current sensor: INA219;
+
 VS1838B IR receiver module;
+
 XL4016 buck converter;
+
 Backup 7805 Voltage regulator circuit;
+
 four TT DC Gearbox Motors; 
+
 The POV cam is a budget wifi home camera with two 28BYJ-48 stepper motors, I re-routed the X and Y axis stepper motors to two LN2003 driver modules, and the camera feed is downloaded from the Tuya App.  
+
 
 ![Rover demo 1:](rover_demo1.gif)
 ![POV demo 1:](POV_demo1.gif)
