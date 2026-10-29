@@ -29,7 +29,7 @@ Rover demo 1 full video: https://youtube.com/shorts/sIEPc9AW5L8?feature=share
 POV demo 1 full video: https://youtu.be/2lEK4Y1qqqQ
 
 Wiring schematics: 
-![Drawn schematics:](Lab3_Drawn_Schematic_Chen-1.jpg)
+![Drawn schematics:](Drawn_Schematics-1.jpg)
 
 Multisim motor driver PWM simulation: 
 This is a Multisim PWM motor driver simulation for 1 DC motor control.
