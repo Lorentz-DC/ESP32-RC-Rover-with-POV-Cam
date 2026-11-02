@@ -28,6 +28,8 @@ Rover demo 1 full video: https://youtube.com/shorts/sIEPc9AW5L8?feature=share
 
 POV demo 1 full video: https://youtu.be/2lEK4Y1qqqQ
 
+
+
 Wiring schematics: 
 ![Drawn schematics:](Drawn_Schematics_new.jpg)
 
