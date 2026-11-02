@@ -1,11 +1,11 @@
 # ESP32-RC-Rover-with-POV-Cam
 ESP32 robotic car with Bluetooth PS4 gamepad control, POV cam and multi-sensors for course project: ELE8941 Robotics and Controls, Semester 4, Electrical Engineering Technician Program, Algonquin College. 
 
-![Rover demo 1:](rover_demo1.gif)
-![POV demo 1:](POV_demo1.gif)
+![Rover demo 1:](media/rover_demo1.gif)
+![POV demo 1:](media/POV_demo1.gif)
 
 
-Components: 
+**Components: **
 two 18650 rechargeable lithium Batteries, 8.2V at full capacity;
 
 DC motor drivers: two TB6612 modules;
@@ -28,9 +28,19 @@ Rover demo 1 full video: https://youtube.com/shorts/sIEPc9AW5L8?feature=share
 
 POV demo 1 full video: https://youtu.be/2lEK4Y1qqqQ
 
+**Robot Assembly: **
+
+![Lower plate assembly: ](media/lower_plate.jpg)
+
+![Power circuit: ](media/power_circuit.jpg)
 
 
-Wiring schematics: 
+![Upper plate assembly: ](media/upper_plate.jpg)
+
+![Complete assembly: ](media/complete_assembly.jpg)
+
+
+**Wiring Schematics: **
 ![Drawn schematics:](Drawn_Schematics_new.jpg)
 
 Multisim motor driver PWM simulation: 
