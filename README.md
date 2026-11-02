@@ -29,14 +29,16 @@ Rover demo 1 full video: https://youtube.com/shorts/sIEPc9AW5L8?feature=share
 POV demo 1 full video: https://youtu.be/2lEK4Y1qqqQ
 
 **Robot Assembly: **
-
+Lower plate assembly:
 ![Lower plate assembly: ](media/lower_plate.jpg)
 
+Power circuit:
 ![Power circuit: ](media/power_circuit.jpg)
 
-
+Upper plate assembly: 
 ![Upper plate assembly: ](media/upper_plate.jpg)
 
+Complete assembly: 
 ![Complete assembly: ](media/complete_assembly.jpg)
 
 
