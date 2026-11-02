@@ -5,7 +5,8 @@ ESP32 robotic car with Bluetooth PS4 gamepad control, POV cam and multi-sensors 
 ![POV demo 1:](media/POV_demo1.gif)
 
 
-**Components: **
+**Components:** 
+
 two 18650 rechargeable lithium Batteries, 8.2V at full capacity;
 
 DC motor drivers: two TB6612 modules;
@@ -28,7 +29,8 @@ Rover demo 1 full video: https://youtube.com/shorts/sIEPc9AW5L8?feature=share
 
 POV demo 1 full video: https://youtu.be/2lEK4Y1qqqQ
 
-**Robot Assembly: **
+**Robot Assembly:**
+
 Lower plate assembly:
 ![Lower plate assembly: ](media/lower_plate.jpg)
 
@@ -42,9 +44,17 @@ Complete assembly:
 ![Complete assembly: ](media/complete_assembly.jpg)
 
 
-**Wiring Schematics: **
+**Wiring and Schematics:**
 ![Drawn schematics:](Drawn_Schematics_new.jpg)
 
+DC wheel motors: 
+
+Stepper Motors: 
+
+Power, wiring and grounding: 
+
+
+**PWM Simulation**
 Multisim motor driver PWM simulation: 
 This is a Multisim PWM motor driver simulation for 1 DC motor control.
 I could not find the Multisim library for TB6612 Driver on Multisim 14.3, so I used the existing DRV8837 in the library to for demonstration purposes. Since for this driver chip IN1 and IN2 need to be swapped in order to reverse the direction, a AND-NOT gate combo was used to swap the input lines. the 5V source is used to simulate Arduino directional pins, and function. 
@@ -52,3 +62,8 @@ I'm running on college cloud VPN so the software does not run very smoothly, nev
 and about 3.5V on 70% duty cycle. 
 
 ![Motor driver PWM simulation](PWM_demo_large.gif) 
+
+**Code Structure:**
+
+**Troubleshooting:** 
+
