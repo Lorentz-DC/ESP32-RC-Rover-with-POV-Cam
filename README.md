@@ -68,6 +68,7 @@ and about 3.5V on 70% duty cycle.
 
 ![Motor driver PWM simulation](PWM_demo_large.gif) 
 
+
 **Code Structures:**
 Bluepad32 for joystick controls, IR receiver for testing;
 
