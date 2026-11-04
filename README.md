@@ -69,11 +69,16 @@ and about 3.5V on 70% duty cycle.
 ![Motor driver PWM simulation](PWM_demo_large.gif) 
 
 **Code Structures:**
-Bluepad32 for play, IR receiver for testing;
+Bluepad32 for joystick controls, IR receiver for testing;
+
 Non-blocking code with millis();
+
 Gate-latching DC motor controls on ESP32;
-AnalogWrite() and ledcWrite();
-Register-thrashing problem;
+
+AnalogWrite() and ledcWrite() on ESP32 vs Arduino MCU;
+
+the register-thrashing problem;
+
 Modular individual motor control function with parameters;
 
 
