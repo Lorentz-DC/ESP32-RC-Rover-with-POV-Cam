@@ -78,9 +78,11 @@ Gate-latching DC motor controls on ESP32;
 
 AnalogWrite() and ledcWrite() on ESP32 vs Arduino MCU;
 
-the register-thrashing problem;
+Bluetooth drop-out problem: register thrashing and dual-core bus contention;
 
 Modular individual motor control function with parameters;
+
+MOSFET Shoot-through protection during direction changes; 
 
 
 **Troubleshooting:** 
