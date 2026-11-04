@@ -71,8 +71,9 @@ and about 3.5V on 70% duty cycle.
 Bluepad32 for play, IR receiver for testing;
 Non-blocking code with millis();
 Gate-latching DC motor controls on ESP32;
+AnalogWrite() and ledcWrite();
 Register-thrashing problem;
-AnalogWrite, ledcWrite and modular motor function;
+Modular individual motor control function with parameters;
 
 
 **Troubleshooting:** 
