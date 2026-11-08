@@ -12,23 +12,17 @@ This project proved to be an invaluable learning experience introducing me to ad
 
 **Components:** 
 
-two 18650 rechargeable lithium Batteries, 8.2V at full capacity;
+Power source: Two ICR18650, 3.7V rechargeable lithium Batteries with 3350mAh each. 8.2V at full capacity connected in series. 
 
-DC motor drivers: two TB6612 modules;
+Car movement: Four TT DC Gearbox Motors controlled by two TB6612  DC motor driver modules;
 
-Stepper motor drivers: two LN2003 modules;
+POV Camera movement: Two 28BYJ-48 stepper motors with two LN2003 driver modules;
 
-Current sensor: INA219;
+Sensors and Low-power modules: INA219 Current sensor; VS1838B IR receiver module;
 
-VS1838B IR receiver module;
+Voltage regulator: LM7805 circuit; (Optional: XL4016 buck converter;)
 
-XL4016 buck converter;
-
-Backup 7805 Voltage regulator circuit;
-
-four TT DC Gearbox Motors; 
-
-The POV cam is a budget wifi home camera with two 28BYJ-48 stepper motors, I re-routed the X and Y axis stepper motors to two LN2003 driver modules, and the camera feed is downloaded from the Tuya App.  
+The POV cam is a budget wifi home camera with two 28BYJ-48 stepper motors for the the X and Y axis movement; I rewired the motors onto two LN2003 driver modules. For the camera video, the camera itself connects to Wifi, and the video feed can be streamed and downloaded from the Tuya App on mobile devices. 
 
 Rover demo 1 full video: https://youtube.com/shorts/sIEPc9AW5L8?feature=share
 
