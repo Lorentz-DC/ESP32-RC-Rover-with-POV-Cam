@@ -1,9 +1,9 @@
 # Project Description
-This robotic project is an ESP32 rover featuring bluetooth PS4 gamepad control, and a 2-axis POV camera with stepper motors. Other key on-board modules and components feature INA219 current sensor, TB6612 Motor drivers, XL4016 buck converter, and a VS1838B IR receiver module for testing operations. 
+This robotic project is an ESP32 rover featuring Bluetooth PS4 gamepad control, and a 2-axis POV camera with stepper motors. Other key on-board modules and components include TB6612 DC motor drivers, ULN2003 Stepper motor drivers, INA219 current sensor, a VS1838B IR receiver module for testing operations, and voltage regulator circuit with LM7805, and an optional XL4016 buck converter.
 
-With core features of the Bluetooth control and the 2-axis POV camera, my rover is an extension from a course project: ELE8941 Robotics and Controls, Semester 4, Electrical Engineering Technician Program, Algonquin College. 
+With core feature of Bluetooth motor controls, my rover is an extension from a course project: ELE8941 Robotics and Controls, Semester 4, Electrical Engineering Technician Program, Algonquin College. 
 
-This project proved to be an invaluable learning experience introducing me to advanced topics in embedded firmware and power electronics. Join me along this journey, as I highlight and document some key progressions such as troubleshooting Bluetooth connections, improving code architecture for motor controls, and power management. 
+This project proved to be an invaluable learning experience introducing me to advanced topics in embedded firmware and power electronics. Join me along this journey, as I highlight and document key progressions such as improving code architecture for motor controls, troubleshooting Bluetooth connections and battery power management. 
 
 ![Rover demo 1:](media/rover_demo1.gif)
 ![POV demo 1:](media/POV_demo1.gif)
