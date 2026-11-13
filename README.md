@@ -3,7 +3,7 @@ This robotic project is an ESP32 rover featuring Bluetooth PS4 gamepad control, 
 
 With core feature of Bluetooth motor controls, my rover is an extension from a course project: ELE8941 Robotics and Controls, Semester 4, Electrical Engineering Technician Program, Algonquin College. 
 
-This project proved to be an invaluable learning experience introducing me to advanced topics in embedded firmware and power electronics. Join me along this journey, as I highlight and document key progressions such as improving code architecture for motor controls, troubleshooting Bluetooth connections and battery power management. 
+This project proved to be an invaluable learning experience introducing me to advanced topics in embedded firmware and power electronics. Join me along this journey, as I highlight and document key progressions such as improving code architecture for motor controls, troubleshooting Bluetooth connection issues, wiring for galvanic isolation, and battery power management. 
 
 ![Rover demo 1:](media/rover_demo1.gif)
 ![POV demo 1:](media/POV_demo1.gif)
