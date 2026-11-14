@@ -66,6 +66,23 @@ and about 3.5V on 70% duty cycle.
 **Code Structures:**
 Bluepad32 for joystick controls, IR receiver for testing;
 
+**Motor Control structure:**
+Global variables for motor control: 
+
+https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L59-L67
+
+Write motor block: 
+
+https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L203-L263
+
+motor stop block: 
+
+https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L265-L273
+
+motor control block: 
+
+https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L276-L366
+
 Non-blocking code with millis();
 
 Gate-latching DC motor controls on ESP32;
