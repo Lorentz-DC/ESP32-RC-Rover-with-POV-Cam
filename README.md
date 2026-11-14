@@ -43,6 +43,9 @@ Complete assembly:
 
 
 **Wiring and Schematics:**
+
+Update: Due to voltage brown-out issues on the ESP32 supply line discussed in the sections below, I've removed the buck converter and put the ESP32 on a separate 8V line, and later put decoupling filter circuit to clean up the supply. 
+
 ![Drawn schematics:](Drawn_Schematics_new.jpg)
 
 DC wheel motors: 
