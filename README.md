@@ -99,9 +99,10 @@ https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/1c9eb0c3103c0ccc3
 
 
 
+
 **Power and signal integrity** 
 
-A persistent issue I have encountered has been Bluetooth dropping-out when the car is running on all 4 DC motors and 2 stepper motors. After troubleshooting and eliminating hypotheses, I've identified the cause to be sudden voltage drops due to DC motor interference and battery capacity issues. I cleaned up the ESP32 supply line with decoupling circuit, which improved noise, but momentary voltage drop still persists, point to battery capacity issues. Below are the oscilloscope measurement demonstrations highlighting the troubleshooting process. 
+A persistent issue I have encountered has been Bluetooth dropping-out when the car is running on all 4 DC motors and 2 stepper motors, which causes ESP32 to disconnect from the PS4 controller, freezing the car. After troubleshooting and eliminating hypotheses on software and wiring issues, I've identified the cause to be sudden voltage drops due to either DC motor interference, or battery capacity issues. I cleaned up the ESP32 supply line with decoupling circuit, which improved noise, but momentary voltage drop still persists, pointing to battery capacity issues. Below are the oscilloscope measurement demonstrations highlighting the troubleshooting process. 
 
 
 For this measurement on the unfiltered 8V power rail for the ESP32 line, oscilloscope time scale set to 500 microseconds; resting battery voltage is around 7.6-7.8V, which is about 6-70% capacity; The PS4 controller is revving all 4 motors on the bench.
