@@ -99,7 +99,8 @@ https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/1c9eb0c3103c0ccc3
 
 
 
-**MCU Power and signal integrity** 
+**Power and signal integrity** 
+
 A persistent issue I have encountered has been Bluetooth dropping-out when the car is running on all 4 DC motors and 2 stepper motors. After troubleshooting and eliminating hypotheses, I've identified the cause to be sudden voltage drops due to DC motor interference and battery capacity issues. I cleaned up the ESP32 supply line with decoupling circuit, which improved noise, but momentary voltage drop still persists, point to battery capacity issues. Below are the oscilloscope measurement demonstrations highlighting the troubleshooting process. 
 
 
