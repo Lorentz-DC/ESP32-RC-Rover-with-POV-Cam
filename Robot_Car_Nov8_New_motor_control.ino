@@ -693,7 +693,7 @@ Serial.println("LittleFS failed to initialize");
 
 
 void loop() { //// Arduino loop function. Runs in CPU 1.
-    // STEPPER EXECUTION: MUST run  every loop iteration without getting blocked
+    // Stepper.runSpeed() must run  at main loop speed without interuption
     myStepperX.runSpeed(); 
     myStepperY.runSpeed(); 
     
@@ -707,14 +707,13 @@ void loop() { //// Arduino loop function. Runs in CPU 1.
     bool dataUpdated = BP32.update();
 
     if (controller_connected_state == true) { 
-        digitalWrite(Blue_LED_pin, HIGH); // Bluetooth connection indicator light
+        digitalWrite(Blue_LED_pin, HIGH); //Bluetooth connection indicator light
 
             if (dataUpdated) {
                 processControllers(); 
             }
 
-        // CONTINUOUS STEPPER SPEED CALCULATION: Stays outside of the pacing timers dataUpdated block
-        if (myControllers[0] != nullptr) {
+        if (myControllers[0] != nullptr) {  //stepper functions need to be continously running at main loop speed; stays outside of the pacing timer blocks
             
             Stepper_Motor_Yaxis_Control(myControllers[0]);
             Stepper_Motor_Xaxis_Control(myControllers[0]);
@@ -732,12 +731,10 @@ void loop() { //// Arduino loop function. Runs in CPU 1.
 
     } else {
         digitalWrite(Blue_LED_pin, LOW);
-        processIR(); // Switch to IR platform if no bluetooth connection
+        processIR(); // if no bluetooth connection, switch to IR control layer for lab testing 
         myStepperX.setSpeed(0);
         myStepperY.setSpeed(0);
     }
     
-
-    // Yield to background tasks
-    //vTaskDelay(1); 
+    //vTaskDelay(1); // optional task delay for background tasks
 }
