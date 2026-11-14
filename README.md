@@ -9,7 +9,6 @@ This project proved to be an invaluable learning experience introducing me to ad
 ![POV demo 1:](media/POV_demo1.gif)
 
 
-
 **Components:** 
 
 Power source: Two ICR18650, 3.7V rechargeable lithium Batteries with 2600mAh. 8.2V at full capacity in series. 
