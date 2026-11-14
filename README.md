@@ -116,7 +116,7 @@ In this measurement on the filtered 8V power rail for the ESP32 line, oscillosco
 ![filtered ESP32 8V rail:]( media/8V_rail_filtered.gif)
 
 side by side comparison on PC picoscope:
-here channel A in the red is measuring ESP32 8V supply line, and channel B in yellow is measuring DC motor 8V supply line. When the battery is about fully charged, we can see that the unfiltered motor rail fluctuating from 8V to 6V when revving on the bench, and the ESP32 line shows significantly stabilized voltage range of about 7.3V to 6.8V. However, soon afterwards, we can see that voltage on both motor and MCU lines suddenly plummeted down to 2V due to battery cutting bluetooth out, indicating battery capacity issues. 
+here channel A in the red is measuring ESP32 8V supply line, and channel B in yellow is measuring DC motor 8V supply line. When the battery is about fully charged, we can see that the unfiltered motor rail fluctuating from 8V to 6V when revving on the bench, and the ESP32 line shows significantly stabilized voltage range of about 7.3V to 6.8V. However, soon afterwards, we can see that voltage on both motor and MCU lines suddenly plummeted down to 2V, cutting ESP32's Bluetooth out, indicating battery capacity issues. 
 
 ![filtered ESP32 8V rail:]( media/picoscope_comparison.gif)
 
