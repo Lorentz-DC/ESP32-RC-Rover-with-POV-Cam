@@ -107,6 +107,7 @@ Voltage sagging; and ground bounce:
 
 For this measurement on the unfiltered 8V power rail for the ESP32 line, oscilloscope time scale set to 500 microseconds; resting battery voltage is around 7.6-7.8V, which is about 6-70% capacity; The PS4 controller is revving all 4 motors on the bench.
 as we can see there is substantial noise and voltage fluctuations, with period of each fluctuating wave roughly equal to 400-500 microseconds, this is roughly on the same scale with the running DC motor frequency of 8K RPM. 
+
 ![unfiltered ESP32 8V rail:]( media/8V_rail_unfiltered.gif)
 
 Adding the filter: 1N4004 diode + 330uF electrolytic capacitor decoupling circuit on the ESP32 8V supply line: 
