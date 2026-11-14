@@ -100,10 +100,20 @@ https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/1c9eb0c3103c0ccc3
 
 
 
-**Troubleshooting:** 
-Bluetooth dropout: ground bounce and voltage sagging;
-Bluetooth drop-out problem: register thrashing and dual-core bus contention;
+**MCU Power and signal integrity** 
+A persistent issue I have encountered has been Bluetooth dropping-out when the car is running: 
+Voltage sagging; and ground bounce:
 
 
+For this measurement on the unfiltered 8V power rail for the ESP32 line, oscilloscope time scale set to 500 microseconds; resting battery voltage is around 7.6-7.8V, which is about 6-70% capacity; The PS4 controller is revving all 4 motors on the bench.
+as we can see there is substantial noise and voltage fluctuations, with period of each fluctuating wave roughly equal to 400-500 microseconds, this is roughly on the same scale with the running DC motor frequency of 8K RPM. 
+![unfiltered ESP32 8V rail:]( media/8V_rail_unfiltered.gif)
+
+Adding the filter: 1N4004 diode + 330uF electrolytic capacitor decoupling circuit on the ESP32 8V supply line: 
+In this measurement on the filtered 8V power rail for the ESP32 line, oscilloscope time scale was set to 250 microsecond, and then 500us, then 1 ms in this gif clip, we can see the motor noise has been substantially cleaned; However, another problem has been exposed, since this time resting battery voltage is only about 7V, the battery is practically empty. When all 4 motors are revving via the controller, we can see massive momentary voltage drops due to weak battery capacity, and at the moment right when voltage plummeted to around 2.5V across the screen, the Bluetooth dropped out again. 
+
+![filtered ESP32 8V rail:]( media/8V_rail_filtered.gif)
+
+**Battery power management** 
 
 
