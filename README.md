@@ -12,7 +12,7 @@ This project proved to be an invaluable learning experience introducing me to ad
 
 **Components:** 
 
-Power source: Two ICR18650, 3.7V rechargeable lithium Batteries with 3350mAh each. 8.2V at full capacity connected in series. 
+Power source: Two ICR18650, 3.7V rechargeable lithium Batteries with 2600mAh. 8.2V at full capacity in series. 
 
 Car movement: Four TT DC Gearbox Motors controlled by two TB6612  DC motor driver modules;
 
