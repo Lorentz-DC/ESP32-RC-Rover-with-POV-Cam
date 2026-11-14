@@ -64,7 +64,6 @@ and about 3.5V on 70% duty cycle.
 
 
 **Code Structures:**
-Bluepad32 for joystick controls, IR receiver for testing;
 
 **Motor Control structure:**
 Global variables for motor control: 
@@ -72,10 +71,13 @@ Global variables for motor control:
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L59-L67
 
 Write motor block: 
+Modular individual motor control function with parameters;
+MOSFET Shoot-through protection during direction changes; 
 
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L203-L263
 
 motor stop block: 
+with the parameterized write_Motor logic in place, the motor_stop function can be easily written: 
 
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L265-L273
 
@@ -83,18 +85,25 @@ motor control block:
 
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L276-L366
 
+
 Non-blocking code with millis();
 
 Gate-latching DC motor controls on ESP32;
 
 AnalogWrite() and ledcWrite() on ESP32 vs Arduino MCU;
 
-Bluetooth drop-out problem: register thrashing and dual-core bus contention;
+**execution layers and main loop:**
+Bluepad32 for joystick controls, IR receiver for testing;
+motor control logic is nested in if(dataUpdated) condition so that it activates when PS4 controller is Bluetooth connected;
 
-Modular individual motor control function with parameters;
+https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/1c9eb0c3103c0ccc38013dc3d27ea864f9c161dd/Robot_Car_Nov8_New_motor_control.ino#L695-L740
 
-MOSFET Shoot-through protection during direction changes; 
 
 
 **Troubleshooting:** 
 Bluetooth dropout: ground bounce and voltage sagging;
+Bluetooth drop-out problem: register thrashing and dual-core bus contention;
+
+
+
+
