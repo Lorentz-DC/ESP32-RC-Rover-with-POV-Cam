@@ -110,9 +110,16 @@ as we can see there is substantial noise and voltage fluctuations, with period o
 ![unfiltered ESP32 8V rail:]( media/8V_rail_unfiltered.gif)
 
 Adding the filter: 1N4004 diode + 330uF electrolytic capacitor "hold-up tank" circuit on the ESP32 8V supply line. note that the 1N4004 will tax a 0.2V to 0.7V drop across the junction, but it still leaves more than enough head room for the ESP32.  if we set the allowable voltage drop (Vrest - Vmin) to be 8V - 4.5V = 3.5V, and assume peak current demand of ESP32 running at full load to be 500mA, given the capacitance 330uF, we should get a buffer time T= 2.3ms, which is enough to cover about 4 times as the observed motor noise period of 500us. However, as we can see in this measurement, this kind of decoupling method cannot supply the sudden voltage plummets caused by weak battery capacity. 
+
 In this measurement on the filtered 8V power rail for the ESP32 line, oscilloscope time scale was set to 250 microsecond, and then 500us, then 1 ms in this gif clip, we can see the motor noise has been substantially cleaned; However, another problem has been exposed, since this time resting battery voltage is only about 7V, the battery is practically empty. When all 4 motors are revving via the controller, we can see massive momentary voltage drops due to weak battery capacity, and at the moment right when voltage plummeted to around 2.5V across the screen, the Bluetooth dropped out again. 
 
 ![filtered ESP32 8V rail:]( media/8V_rail_filtered.gif)
+
+side by side comparison on PC picoscope:
+here channel A in the red is measuring ESP32 8V supply line, and channel B in yellow is measuring DC motor 8V supply line. When the battery is about fully charged, we can see that the unfiltered motor rail fluctuating from 8V to 6V when revving on the bench, and the ESP32 line shows significantly stabilized voltage range of about 7.3V to 6.8V. However, soon afterwards, we can see that voltage on both motor and MCU lines suddenly plummeted down to 2V due to battery cutting bluetooth out, indicating battery capacity issues. 
+
+![filtered ESP32 8V rail:]( media/picoscope_comparison.gif)
+
 
 **Battery power management** 
 
