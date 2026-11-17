@@ -77,6 +77,9 @@ write_Motor function:
 Modular individual motor control function with parameters;
 MOSFET Shoot-through protection during direction changes; 
 
+https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L203-L263
+
+
 This function uses a parameterized method that writes to each of the four motors specifying direction and PWM speed, using two global array values of PWM speed and direction of each motor, it compares the last stored value with the new write PWM or directional values, i.e, "edge triggers";
 If the values are not changed, the function exits, if either of the values is different, write to that specific value with analogwriting PWM speed or digital writing direction pin. By specifying motor_num 0-3 in the function parameter, the funcion uses switch case method to write to each motor the specified values. 
 When there is sudden directional change, the function features a brief pause of movement and then writes the reverse direction, protecting H-bridge MOSFET from shorts. 
@@ -86,7 +89,6 @@ This continous writing on the register will cause CPU overhead and glitches in r
 To make up for this problem, millis() and vtaskDelay methods has to be used in the mainloop() to prevent register flooding. 
 In contrast, the gated method writes to individual motor registers the new values only once, and only if value differences are detected, it is more effieicnt to run on the ESP32 CPU and prevents register problems, and no millis() gating or vtaskDelay is necessary, only optional.  
 
-https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L203-L263
 
 motor stop block: 
 with the parameterized write_Motor logic in place, the motor_stop function can be easily written: 
