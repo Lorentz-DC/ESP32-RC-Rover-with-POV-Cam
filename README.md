@@ -68,12 +68,14 @@ and about 3.5V on 70% duty cycle.
 **Code Structures:**
 
 **Motor Control structure:**
+
 Global variables for motor control: Modularized and parameterized write_Motor() function;
 the array values are to store the last PWM speed and direction of each motor;
 
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L59-L67
 
 write_Motor function: 
+
 Modular individual motor control function with parameters;
 MOSFET Shoot-through protection during direction changes; 
 
