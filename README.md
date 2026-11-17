@@ -68,13 +68,23 @@ and about 3.5V on 70% duty cycle.
 **Code Structures:**
 
 **Motor Control structure:**
-Global variables for motor control: 
+Global variables for motor control: Modularized and parameterized write_Motor() function;
+the array values are to store the last PWM speed and direction of each motor;
 
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L59-L67
 
-Write motor block: 
+write_Motor function: 
 Modular individual motor control function with parameters;
 MOSFET Shoot-through protection during direction changes; 
+
+this function uses a parameterized method that writes to each of the four motors specifying direction and PWM speed, using two global array values of PWM speed and direction of each motor, it compares the last stored value with the new write PWM or directional values, i.e, "edge triggers";
+If the values are not changed, the function exits, if either of the values is different, write to that specific value with analogwriting PWM speed or digital writing direction pin. By specifying motor_num 0-3 in the function parameter, the funcion uses switch case method to write to each motor the specified values. 
+When there is sudden directional change, the function features a brief pause of movement and then writes the reverse direction, protecting H-bridge MOSFET from shorts. 
+
+This modularized function not only makes it very easy and efficient to write motion control logic ( forward/reverse, piviots, veer. )later on, The biggest benifit of this function is for continous bluetooth joystick motion control. If only the non-gated analogWrite and digitalWrite lines are used for each type of movement (forward, veer, etc) in the movement control logic, the function will run at loop speed and continously write to registers even if motor movements stay the same value. 
+This continous writing on the register will cause CPU overhead and glitches in robot movement, especially since analogWrite() is an older version of command rather than LedcWrite on ESP32.
+To make up for this problem, millis() and vtaskDelay methods has to be used in the mainloop() to prevent register flooding. 
+The gated method writes to individual motor registers the new values only once, and only if value differences are detected, it is more effieicnt to run on the ESP32 CPU and prevents register problems, and no millis() gating or vtaskDelay is necessary, only optional.  
 
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L203-L263
 
@@ -84,6 +94,9 @@ with the parameterized write_Motor logic in place, the motor_stop function can b
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L265-L273
 
 motor control block: 
+note: in the veer functions of left or right, the veer values are added as a parameter, adding into the PWM values of the the left side of motors to veer right, or vice versa.
+//note that reverse_veer_right or _left basically returns the car to its original position, while the veering curve stays the same. perhaps we should call it veer starboard or portside instead. 
+
 
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L276-L366
 
