@@ -105,13 +105,10 @@ note: in the veer functions of left or right, the veer values are added as a par
 https://github.com/Lorentz-DC/ESP32-RC-Rover-with-POV-Cam/blob/c702659eab681ca937facb6cbbe97cdf01d75455/Robot_Car_Nov8_New_motor_control.ino#L276-L366
 
 
-Non-blocking code with millis();
 
-Gate-latching DC motor controls on ESP32;
-
-AnalogWrite() and ledcWrite() on ESP32 vs Arduino MCU;
 
 **execution layers and main loop:**
+
 Bluepad32 for joystick controls, IR receiver for testing;
 motor control logic is nested in if(dataUpdated) condition so that it activates when PS4 controller is Bluetooth connected;
 
