@@ -144,4 +144,9 @@ here channel A in the red is measuring ESP32 8V supply line, and channel B in ye
 
 **Battery power management** 
 
+Given battery reliability issues, a natural follow-up is to create a battery management code to calculate and reflect real-time remaining battery capacity, with the help of INA219 module and OLED display. Since measuring voltage alone can be deceiving, mAh calculations must be used to accumulate battery capacity consumed and compare with what still remains. 
+
+---UNDER CONSTRUCTION---
+
+
 
