@@ -5,7 +5,7 @@ With core feature of Bluetooth motor controls, my rover is an extension from a c
 
 This project proved to be an invaluable learning experience introducing me to advanced topics in embedded firmware and power electronics. Join me along this journey, as I highlight and document key progressions such as improving code architecture for motor controls, troubleshooting Bluetooth connection issues, wiring for galvanic isolation, and battery power management. 
 
-![Rover demo 1:](media/rover_demo1.gif)
+![Rover demo 1:](media/Robot_demo_nov17.gif)
 ![POV demo 1:](media/POV_demo1.gif)
 
 
